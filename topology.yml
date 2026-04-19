@@ -1,0 +1,37 @@
+name: windows-10-testing
+
+hosts:
+  - name: image-test
+    base_box:
+      image: windows-10-x86_64
+      mgmt_user: windows
+      mgmt_protocol: winrm
+    flavor: c4_r8_d60
+
+routers:
+  - name: router
+    base_box:
+      image: debian-12-x86_64
+      mgmt_user: debian
+      mgmt_protocol: ssh      
+    flavor: standard.small
+
+wan:
+  name: internet-connection
+  cidr: 100.100.100.0/24
+
+networks:
+  - name: network
+    cidr: 10.0.0.0/24
+
+net_mappings:
+    - host: image-test
+      network: network
+      ip: 10.0.0.10
+
+router_mappings:
+    - router: router
+      network: network
+      ip: 10.0.0.1
+
+groups: []
