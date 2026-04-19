@@ -3,10 +3,11 @@
   gather_facts: yes
   become: yes
   roles:
-    - name: user-access
+    - name: ansible-role-user-access-windows
       user_access_username: user
       user_access_password: Password123
-      user_access_sudo: True
+      user_access_admin: True
+      user_access_rdp: True
   tasks:
     - name: Print hello world
       debug:
