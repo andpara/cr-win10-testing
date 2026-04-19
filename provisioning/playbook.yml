@@ -1,0 +1,8 @@
+- name: Hello world
+  hosts: image-test
+  gather_facts: yes
+  tasks:
+
+    - name: Print hello world
+      debug:
+        msg: "Hello World"
