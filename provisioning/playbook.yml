@@ -1,15 +1,11 @@
 - name: Hello world
   hosts: image-test
   gather_facts: yes
-  become: yes
-  become_method: runas
-  become_user: Administrator
 
   roles:
     - name: ansible-role-user-access-windows
       user_access_username: user
       user_access_password: Password123
-      user_access_admin: True
       user_access_rdp: True
   tasks:
     - name: Print hello world
