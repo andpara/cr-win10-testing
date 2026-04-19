@@ -1,8 +1,13 @@
 - name: Hello world
   hosts: image-test
   gather_facts: yes
+  become: yes
+  roles:
+    - name: user-access
+      user_access_username: user
+      user_access_password: Password123
+      user_access_sudo: True
   tasks:
-
     - name: Print hello world
       debug:
         msg: "Hello World"
