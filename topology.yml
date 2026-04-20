@@ -1,7 +1,7 @@
 name: windows-10-testing
 
 hosts:
-  - name: image-test
+  - name: windows
     base_box:
       image: windows-10-x86_64
       mgmt_user: windows
@@ -19,11 +19,11 @@ networks:
     cidr: 10.0.0.0/24
 
 wan:
-  name: internet-connection
+  name: wan
   cidr: 100.100.100.0/24
 
 net_mappings:
-    - host: image-test
+    - host: windows
       network: network
       ip: 10.0.0.10
 
