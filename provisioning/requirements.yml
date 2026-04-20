@@ -1,4 +1,4 @@
 - name: ansible-role-user-access-windows
-  src: https://github.com/cyberrangecz/ansible-role-user-access-windows
+  src: https://github.com/andpara/ansible-role-user-access-windows
   scm: git
   version: v1.0.0
