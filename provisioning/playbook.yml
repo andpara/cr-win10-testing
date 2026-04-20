@@ -2,12 +2,6 @@
   hosts: windows
   gather_facts: yes
 
-  roles:
-    - name: ansible-role-user-access-windows
-      user_access_username: user
-      user_access_password: Password123
-      user_access_rdp: True
-      user_access_admin: True
   tasks:
     - name: Print hello world
       debug:
