@@ -1,5 +1,5 @@
 - name: Hello world
-  hosts: image-test
+  hosts: windows
   gather_facts: yes
 
   roles:
